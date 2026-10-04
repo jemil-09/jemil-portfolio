@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jemil Gondaliya — Data Science & AI Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,800;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+:root{--bg:#f6f2ea;--ink:#16130f;--mute:#6d675c;--line:#d9d2c3;--acc:#d9482b;--card:#fffdf8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14120f;--ink:#f1ece1;--mute:#a39c8d;--line:#332f28;--acc:#ff6a47;--card:#1c1914}}
+:root[data-theme="dark"]{--bg:#14120f;--ink:#f1ece1;--mute:#a39c8d;--line:#332f28;--acc:#ff6a47;--card:#1c1914}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.7 Inter,system-ui,sans-serif;transition:background .4s,color .4s;overflow-x:hidden}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.1;margin:0}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.row{display:flex;flex-wrap:wrap;margin:0 -12px}.row>*{padding:12px;width:100%}
+@media(min-width:768px){.col-md-4{width:33.333%}.col-md-5{width:41.666%}.col-md-6{width:50%}.col-md-7{width:58.333%}.col-md-8{width:66.666%}}
+.collapse:not(.show){display:none}.collapsing{overflow:hidden;height:0;transition:height .3s}
+#progress{position:fixed;top:0;left:0;height:3px;background:var(--acc);width:0;z-index:200}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:60px;flex-wrap:wrap}
+.logo{font-family:'Playfair Display',serif;font-weight:800;font-size:1.3rem}.logo span{color:var(--acc)}
+.navlinks{display:flex;gap:6px;align-items:center;flex-basis:100%;flex-direction:column;padding-bottom:10px}
+@media(min-width:768px){.navlinks{display:flex!important;flex-direction:row;flex-basis:auto;padding:0;height:auto!important}}
+.nav-link{padding:6px 12px;font-size:.9rem;color:var(--mute);border-bottom:2px solid transparent;transition:.25s}
+.nav-link:hover,.nav-link.active{color:var(--ink);border-color:var(--acc)}
+button{font:inherit;cursor:pointer;color:inherit}
+.ico{background:none;border:1px solid var(--line);border-radius:50%;width:36px;height:36px;transition:.3s}.ico:hover{border-color:var(--acc);transform:rotate(25deg)}
+@media(min-width:768px){#burger{display:none}}
+section{padding:100px 0 60px}
+.eyebrow{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);font-weight:600}
+.rule{border-top:1px solid var(--line);margin-bottom:36px;padding-top:14px;display:flex;justify-content:space-between}
+#home{min-height:100vh;display:flex;align-items:center;padding-top:110px}
+h1{font-size:clamp(2.8rem,9vw,6.5rem);font-weight:800;letter-spacing:-.02em}
+h1 em{color:var(--acc);font-weight:500}
+.typed{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.2rem,3vw,1.9rem);margin:18px 0;min-height:2.4rem}
+.typed::after{content:'|';color:var(--acc);animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.btn{display:inline-block;padding:12px 26px;border:1px solid var(--ink);margin:6px 10px 6px 0;position:relative;overflow:hidden;z-index:0;transition:color .35s}
+.btn::before{content:'';position:absolute;inset:0;background:var(--ink);transform:translateY(101%);transition:transform .35s;z-index:-1}
+.btn:hover{color:var(--bg)}.btn:hover::before{transform:none}
+.btn.fill{background:var(--acc);border-color:var(--acc);color:#fff}
+.orb{width:min(280px,70vw);aspect-ratio:1;border-radius:50%;border:1px solid var(--line);margin:auto;position:relative;animation:spin 24s linear infinite}
+.orb i{position:absolute;width:14px;height:14px;border-radius:50%;background:var(--acc)}
+.orb i:nth-child(1){top:-7px;left:50%}.orb i:nth-child(2){bottom:20%;left:2%;background:var(--ink)}.orb i:nth-child(3){bottom:20%;right:2%;opacity:.5}
+.orb::after{content:'AI';position:absolute;inset:0;display:grid;place-items:center;font:800 4rem 'Playfair Display',serif;animation:spin 24s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+h2{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:22px}
+.stat{border-top:2px solid var(--ink);padding-top:10px}.stat b{font:800 2.6rem 'Playfair Display',serif;display:block}
+.skill{margin-bottom:22px}.skill div{display:flex;justify-content:space-between;font-weight:500}
+.track{height:4px;background:var(--line);margin-top:8px}.fillbar{height:100%;width:0;background:var(--acc);transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.tags span{display:inline-block;border:1px solid var(--line);padding:4px 12px;margin:0 6px 8px 0;font-size:.85rem;border-radius:99px;transition:.25s}.tags span:hover{background:var(--acc);color:#fff;border-color:var(--acc);transform:translateY(-3px)}
+.filters{margin-bottom:16px}.filters button{background:none;border:0;border-bottom:2px solid transparent;padding:4px 14px 4px 0;color:var(--mute)}.filters button.on{color:var(--ink);border-color:var(--acc)}
+.proj{background:var(--card);border:1px solid var(--line);padding:26px;height:100%;cursor:pointer;transition:transform .35s,box-shadow .35s,border-color .35s}
+.proj:hover{transform:translateY(-8px) rotate(-.6deg);box-shadow:8px 8px 0 var(--acc);border-color:var(--ink)}
+.proj small{color:var(--acc);font-weight:600;letter-spacing:.1em}.proj h3{font-size:1.6rem;margin:8px 0}.proj p{color:var(--mute);font-size:.95rem}
+.proj.hide{display:none}
+.overlay{position:fixed;inset:0;z-index:300;background:var(--bg);padding:90px 20px 40px;overflow:auto;transform:translateY(100%);transition:transform .6s cubic-bezier(.7,0,.2,1);visibility:hidden}
+.overlay.open{transform:none;visibility:visible}
+.overlay .x{position:fixed;top:calc(16px + env(safe-area-inset-top,0px));right:20px}
+.field{width:100%;background:none;border:0;border-bottom:1px solid var(--ink);padding:12px 0;margin-bottom:18px;color:var(--ink);font:inherit;outline:none;transition:border-color .3s}.field:focus{border-color:var(--acc)}
+.big-mail{font:800 clamp(1.4rem,4vw,2.4rem) 'Playfair Display',serif;border-bottom:2px solid var(--acc)}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mute);font-size:.85rem;text-align:center}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s}.reveal.in{opacity:1;transform:none}
+#toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,100px);background:var(--ink);color:var(--bg);padding:12px 22px;transition:.4s;z-index:400}#toast.show{transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+a,a:hover{color:inherit}
+.btn{--bs-btn-hover-border-color:var(--ink);--bs-btn-hover-bg:transparent}
+.btn.fill:hover{border-color:var(--acc)}
+</style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#nav" data-bs-root-margin="-40% 0px -55% 0px">
+<div id="progress"></div>
+<nav id="nav"><div class="container"><div class="bar">
+  <a href="#home" class="logo">Jemil<span>.</span>Gondaliya</a>
+  <button class="ico" id="burger" data-bs-toggle="collapse" data-bs-target="#links" aria-label="Menu">☰</button>
+  <div class="collapse navlinks" id="links">
+    <a class="nav-link" href="#home">Home</a><a class="nav-link" href="#about">About</a><a class="nav-link" href="#skills">Skills</a><a class="nav-link" href="#projects">Projects</a><a class="nav-link" href="#contact">Contact</a>
+    <button class="ico" id="theme" aria-label="Toggle theme">◐</button>
+  </div>
+</div></div></nav>
+
+<section id="home"><div class="container"><div class="row" style="align-items:center">
+  <div class="col-md-8"><div class="eyebrow">Portfolio · 2026</div>
+    <h1>Turning <em>data</em> into decisions.</h1>
+    <div class="typed" id="typed"></div>
+    <p style="color:var(--mute);max-width:520px">Hi, I'm Jemil Gondaliya — a B.Tech Computer Science student passionate about AI, machine learning and solving problems with code.</p>
+    <a href="#projects" class="btn fill">See my work</a><a href="#contact" class="btn">Get in touch</a></div>
+  <div class="col-md-4"><div class="orb"><i></i><i></i><i></i></div></div>
+</div></div></section>
+
+<section id="about"><div class="container reveal">
+  <div class="rule"><span class="eyebrow">01 — About</span><span>Who I am</span></div>
+  <div class="row">
+    <div class="col-md-7"><h2>Curious mind, <em style="color:var(--acc)">numbers</em> first.</h2>
+      <p>I'm a Computer Science &amp; Engineering student pursuing a B.Tech, with a strong interest in Artificial Intelligence and Machine Learning. I enjoy problem solving through data structures and algorithms, learning new programming languages, and I take part in college hackathons to turn ideas into working projects.</p></div>
+    <div class="col-md-5"><div class="row">
+      <div class="col-6" style="width:50%"><div class="stat"><b data-n="9.4">0</b>CGPA</div></div>
+      <div class="col-6" style="width:50%"><div class="stat"><b data-n="4">0</b>Projects</div></div>
+    </div></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="container reveal">
+  <div class="rule"><span class="eyebrow">02 — Skills</span><span>What I use</span></div>
+  <div class="row">
+    <div class="col-md-6" id="bars"></div>
+    <div class="col-md-6"><h3 style="margin-bottom:14px">Toolbox</h3><div class="tags"><span>DSA</span><span>Python</span><span>C / C++</span><span>Java</span><span>Machine Learning</span><span>Artificial Intelligence</span><span>Problem Solving</span><span>Git</span><span>Hackathons</span><span>Teamwork</span></div></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="container reveal">
+  <div class="rule"><span class="eyebrow">03 — Projects</span><span>Selected work</span></div>
+  <div class="filters" id="filters"><button class="on" data-f="all">All</button><button data-f="ml">Machine Learning</button><button data-f="dl">Deep Learning</button><button data-f="viz">Analytics</button></div>
+  <div class="row" id="grid"></div>
+</div></section>
+
+<section id="contact"><div class="container reveal">
+  <div class="rule"><span class="eyebrow">04 — Contact</span><span>Say hello</span></div>
+  <div class="row">
+    <div class="col-md-6"><h2>Let's build something intelligent.</h2><p style="color:var(--mute)">Open to internships, research and collaboration.</p>
+      <a class="big-mail" href="mailto:you@example.com">you@example.com</a>
+      <p style="margin-top:18px"><a href="#" class="nav-link" style="padding-left:0">LinkedIn ↗</a> <a href="#" class="nav-link">GitHub ↗</a> <a href="#" class="nav-link">Kaggle ↗</a></p></div>
+    <div class="col-md-6"><div id="form">
+      <input class="field" id="fn" placeholder="Your name"><input class="field" id="fe" placeholder="Your email"><textarea class="field" id="fm" rows="3" placeholder="Message"></textarea>
+      <button class="btn fill" id="send">Send message</button></div></div>
+  </div>
+</div></section>
+<footer>© 2026 Jemil Gondaliya · Built with HTML, Bootstrap &amp; JS</footer>
+
+<div class="overlay" id="ov"><button class="ico x" id="close" aria-label="Close">✕</button>
+  <div class="container"><div class="eyebrow" id="ot"></div><h2 id="oh"></h2><p id="op" style="max-width:640px;color:var(--mute)"></p><div class="tags" id="ostack"></div><a href="#" class="btn">View on GitHub ↗</a></div></div>
+<div id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const skills=[["Data Structures & Algorithms",90],["Problem Solving",88],["Programming Languages",85],["Python",80],["Machine Learning",70]];
+const projects=[
+ {t:"House Price Predictor",c:"ml",tag:"MACHINE LEARNING",d:"Regression pipeline with feature engineering and model comparison.",l:"Built an end-to-end regression pipeline, compared Linear, Random Forest and XGBoost, and reached an R² of 0.91. Replace with your details.",s:["Python","Scikit-learn","Pandas"]},
+ {t:"Image Classifier",c:"dl",tag:"DEEP LEARNING",d:"CNN that classifies images with transfer learning.",l:"Fine-tuned a pretrained CNN to classify images into categories with data augmentation. Replace with your details.",s:["TensorFlow","Keras","OpenCV"]},
+ {t:"Sales Dashboard",c:"viz",tag:"ANALYTICS",d:"Interactive dashboard exposing revenue trends.",l:"Cleaned a sales dataset and built interactive visuals to surface regional trends. Replace with your details.",s:["Power BI","SQL","Excel"]},
+ {t:"Sentiment Analyzer",c:"ml",tag:"NLP",d:"Detects sentiment in reviews and tweets.",l:"Trained a text classifier using TF-IDF and logistic regression on product reviews. Replace with your details.",s:["NLTK","Scikit-learn","Flask"]}];
+// skills + projects render
+$('#bars').innerHTML=skills.map(([n,v])=>`<div class="skill"><div><span>${n}</span><span>${v}%</span></div><div class="track"><div class="fillbar" data-w="${v}"></div></div></div>`).join('');
+$('#grid').innerHTML=projects.map((p,i)=>`<div class="col-md-6 pcol" data-c="${p.c}"><div class="proj" data-i="${i}"><small>${p.tag}</small><h3>${p.t}</h3><p>${p.d}</p><span style="color:var(--acc)">Read more →</span></div></div>`).join('');
+// typed text
+const words=["Data Science Student","Machine Learning Enthusiast","AI Problem Solver"];let wi=0,ci=0,del=false;
+(function type(){const w=words[wi];$('#typed').textContent=w.slice(0,ci);ci+=del?-1:1;let t=del?40:90;
+ if(!del&&ci>w.length){del=true;t=1400}else if(del&&ci<0){del=false;wi=(wi+1)%words.length;ci=0;t=300}setTimeout(type,t)})();
+// reveal + counters + bars
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');
+ $$('.fillbar',e.target).forEach(b=>b.style.width=b.dataset.w+'%');
+ $$('[data-n]',e.target).forEach(el=>{const n=+el.dataset.n,dec=n%1?1:0;let s=null;const f=t=>{s=s||t;const p=Math.min((t-s)/1400,1);el.textContent=(n*p).toFixed(dec);if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)});
+ io.unobserve(e.target)}),{threshold:.15});
+$$('.reveal').forEach(el=>io.observe(el));
+// scroll progress
+addEventListener('scroll',()=>{$('#progress').style.width=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100)+'%'},{passive:true});
+// filters
+$$('#filters button').forEach(b=>b.onclick=()=>{$$('#filters button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+ $$('.pcol').forEach(c=>c.style.display=(b.dataset.f==='all'||c.dataset.c===b.dataset.f)?'':'none')});
+// project "page" overlay
+$$('.proj').forEach(c=>c.onclick=()=>{const p=projects[c.dataset.i];$('#ot').textContent=p.tag;$('#oh').textContent=p.t;$('#op').textContent=p.l;
+ $('#ostack').innerHTML=p.s.map(x=>`<span>${x}</span>`).join('');$('#ov').classList.add('open');document.body.style.overflow='hidden'});
+const closeOv=()=>{$('#ov').classList.remove('open');document.body.style.overflow=''};
+$('#close').onclick=closeOv;addEventListener('keydown',e=>e.key==='Escape'&&closeOv());
+// theme
+$('#theme').onclick=()=>{const r=document.documentElement,dark=getComputedStyle(r).getPropertyValue('--bg').trim()==='#14120f';r.dataset.theme=dark?'light':'dark'};
+// close mobile menu on click
+$$('.nav-link').forEach(a=>a.addEventListener('click',()=>{const m=$('#links');if(m.classList.contains('show'))bootstrap.Collapse.getOrCreateInstance(m).hide()}));
+// contact form
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800)}
+$('#send').onclick=()=>{const n=$('#fn').value.trim(),e=$('#fe').value.trim(),m=$('#fm').value.trim();
+ if(!n||!/^\S+@\S+\.\S+$/.test(e)||!m)return toast('Please fill all fields with a valid email');
+ location.href=`mailto:you@example.com?subject=Portfolio message from ${encodeURIComponent(n)}&body=${encodeURIComponent(m+'\n\n'+e)}`;toast('Thanks '+n+'! Opening your mail app…')};
+</script>
+</body>
+</html>
